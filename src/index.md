@@ -118,15 +118,6 @@ This may be useful if (say) you want a photo next to a text in a specific way.
 </div>
 ~~~
 
-## Other example pages
-
-Just to show how the structure can work, here are a few (empty) pages:
-
-* [menu1](/pub/menu1.html) with an example page
-  * [example page](/pub/menu1/example.html)
-* [menu2](/pub/menu2.html)
-* [menu3](/pub/menu3.html)
-
 ## References (not really)
 
 * \biblabel{noether15}{Noether (1915)} **Noether**,  Körper und Systeme rationaler Funktionen, 1915.
