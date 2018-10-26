@@ -15,15 +15,20 @@
 	</head>
     <body>
         <header>
-            <div class="blog-name"><a href="/">Septimia Zenobia</a></div>
+            <div class="blog-name"><a href="./">Septimia Zenobia</a></div>
             <nav>
+				<!--
+				NOTE: the baseurl stuff is needed only because this is a github project and therefore the baseurl is not just tlienart.github.io but in fact tlienart.github.io/JuDocExample
+				for your own website you can safely ignore this.
+				See also definition of the baseurl in config.md
+				-->
                 <ul>
-                    <li><a href="..">Home</a></li>
-                    <li><a href="../pub/menu1.html">Menu 1</a></li>
-                    <li><a href="../pub/menu2.html">Menu 2</a></li>
-                    <li><a href="../pub/menu3.html">Menu 3</a></li>
+                    <li><a href="{{fill baseurl}}">Home</a></li>
+                    <li><a href="{{fill baseurl}}/pub/menu1.html">Menu 1</a></li>
+                    <li><a href="{{fill baseurl}}/pub/menu2.html">Menu 2</a></li>
+                    <li><a href="{{fill baseurl}}/pub/menu3.html">Menu 3</a></li>
                 </ul>
-                <img src="/assets/infra/hamburger.svg" id="menu-icon">
+                <img src="{{fill baseurl}}/assets/infra/hamburger.svg" id="menu-icon">
             </nav>
         </header>
 

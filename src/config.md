@@ -1,5 +1,6 @@
 <!-- add here global variables to use throughout your pages -->
 @def author = "Septimia Zenobia"
+@def baseurl = "http://localhost:8000/"
 
 <!-- add here global commands to use throughout your pages -->
 \newcommand{\R}{\mathbb R}
