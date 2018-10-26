@@ -99,7 +99,9 @@ Let's give an example:
 
 ### Raw HTML
 
-You can include raw HTML. Not much  more to add. This may be useful if (say) you want a photo next to a text in a specific way.
+You can include raw HTML by just surrounding a block with `~~~`.
+Not much more to add.
+This may be useful if (say) you want a photo next to a text in a specific way.
 
 ~~~
 <div class="row">
