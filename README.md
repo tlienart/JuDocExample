@@ -2,6 +2,8 @@
 
 The aim of this repository is to show a simple site which uses [JuDoc.jl](https://github.com/tlienart/JuDoc.jl) that you can start from to become familiar with JuDoc and, hopefully, build your own website.
 
+If you run the steps successfully you should see [this website](https://tlienart.github.io/JuDocExample) locally and be able to modify it.
+
 To get started:
 
 1. download / fork / clone this repository somewhere appropriate: `git clone https://github.com/tlienart/JuDocExample.git`
