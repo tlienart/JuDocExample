@@ -1,3 +1,3 @@
 @def title = "Example page"
 
-Hello
+# Example page in menu 1

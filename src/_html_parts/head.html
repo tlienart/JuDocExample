@@ -3,11 +3,28 @@
 	<head>
 		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/css/main.css">
+		{{ if isdemo }}
+			<link rel="stylesheet" href="/css/main.css">
+		{{ else }}
+			<link rel="stylesheet" href="/css/main.css">
+	        <link rel="icon" href="/assets/infra/favicon.png">
+		{{ end }}
 		{{ifdef title}} <title>{{fill title}}</title>	{{end}}
 		{{if hasmath}} {{insert head_katex.html }} 		{{end}}
         {{if hascode}} {{insert head_highlight.html }} 	{{end}}
 	</head>
     <body>
+        <header>
+            <div class="blog-name"><a href="/">Septimia Zenobia</a></div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/pub/menu1.html">Menu 1</a></li>
+                    <li><a href="/pub/menu2.html">Menu 2</a></li>
+                    <li><a href="/pub/menu3.html">Menu 3</a></li>
+                </ul>
+                <img src="/assets/infra/hamburger.svg" id="menu-icon">
+            </nav>
+        </header>
 
 <!-- Content appended here -->
