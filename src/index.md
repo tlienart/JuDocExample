@@ -122,7 +122,20 @@ This may be useful if (say) you want a photo next to a text in a specific way.
 </div>
 ~~~
 
-**Note**: again, entire such blocks can be made into commands via `\newcommand{\mynewblock}[1]{...}`.
+**Note 1**: again, entire such blocks can be made into commands via `\newcommand{\mynewblock}[1]{...}`.
+
+**Note 2**: whatever is in a raw HTML block is *not* further processed (so you can't have LaTeX in there for instance). A partial way around this is to use `@@...` blocks which *will* be recursively parsed. The following code will give the same result as above with a small difference.
+
+@@row
+@@container
+@@left ![](assets/index/profpic.jpg) @@
+@@
+Marine iguanas are **truly splendid** creatures. They're not found in equations like $\exp(-i\pi)+1$. But they're still quite cool.
+~~~
+<div style="clear: both"></div>
+~~~
+@@
+
 
 ## Pages and structure
 

@@ -73,7 +73,7 @@ len&#40;p::T&#41; where T&lt;:Point &#61; sqrt&#40;sum&#40;getfield&#40;p, η&#4
 <h2>Basic JuDoc extensions</h2>
 <h3>Divs</h3>
 <p>It may be useful to get a quick way to make part of your document an element of a div that you can style as you wish. For instance, you could want a blue background behind some text.</p>
-<div class="colbox-blue">Here we go&#33; &#40;this is styled in the css sheet with name &quot;colbox-yellow&quot;&#41;.</div>
+<div class="colbox-blue">Here we go&#33; &#40;this is styled in the css sheet with name &quot;colbox-blue&quot;&#41;.</div>
 
 <p>This is just a <code>&lt;div&gt;</code> so you can put this wherever you like and locally style your text.</p>
 <h3>LaTeX and Maths</h3>
@@ -117,7 +117,14 @@ len&#40;p::T&#41; where T&lt;:Point &#61; sqrt&#40;sum&#40;getfield&#40;p, η&#4
   </div>
 </div>
 
-<p><strong>Note</strong>: again, entire such blocks can be made into commands via <code>\newcommand&#123;\mynewblock&#125;&#91;1&#93;&#123;...&#125;</code>.</p>
+<p><strong>Note 1</strong>: again, entire such blocks can be made into commands via <code>\newcommand&#123;\mynewblock&#125;&#91;1&#93;&#123;...&#125;</code>.</p>
+<p><strong>Note 2</strong>: whatever is in a raw HTML block is <em>not</em> further processed &#40;so you can&#39;t have LaTeX in there for instance&#41;. A partial way around this is to use <code>@@...</code> blocks which <em>will</em> be recursively parsed. The following code will give the same result as above with a small difference.</p>
+<div class="row"><div class="container"><div class="left"><img src="assets/index/profpic.jpg" alt="" /> </div>
+</div>
+ Marine iguanas are <strong>truly splendid</strong> creatures. They&#39;re not found in equations like \(\exp(-i\pi)+1\). But they&#39;re still quite cool. 
+<div style="clear: both"></div>
+</div>
+
 <h2>Pages and structure</h2>
 <p>Here are a few empty pages connecting to the menu links to show where files can go and the resulting paths. &#40;It&#39;s probably best if you look at the source folder for this&#41;.</p>
 <ul>
