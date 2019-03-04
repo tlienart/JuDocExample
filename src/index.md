@@ -56,7 +56,7 @@ It may be useful to get a quick way to make part of your document an element of 
 For instance, you could want a blue background behind some text.
 
 @@colbox-blue
-Here we go! (this is styled in the css sheet with name "colbox-yellow").
+Here we go! (this is styled in the css sheet with name "colbox-blue").
 @@
 
 This is just a `<div>` so you can put this wherever you like and locally style your text.
