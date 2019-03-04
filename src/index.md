@@ -122,6 +122,8 @@ This may be useful if (say) you want a photo next to a text in a specific way.
 </div>
 ~~~
 
+**Note**: again, entire such blocks can be made into commands via `\newcommand{\mynewblock}[1]{...}`.
+
 ## Pages and structure
 
 Here are a few empty pages connecting to the menu links to show where files can go and the resulting paths. (It's probably best if you look at the source folder for this).
@@ -148,4 +150,4 @@ Last modified: {{ fill jd_mtime }}.
 (cf. `src/_html_parts/page_foot.html`) which will then replace these braces with the content of a dictionary of variables at the key `jd_mtime`.
 This dictionary of variables is accessed locally by pages through `@def varname = value` and globally through the `config.md` page via the same syntax.
 
-There's a few other such functions of the form `{{ fname p₁ p₂}}` as well as support for conditional blocks.
+There's a few other such functions of the form `{{fname p₁ p₂}}` as well as support for conditional blocks. If you wander through the `src/_html_parts/` folder and its content, you should be able to see those in action.
