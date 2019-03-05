@@ -151,10 +151,25 @@ len&#40;p::T&#41; where T&lt;:Point &#61; sqrt&#40;sum&#40;getfield&#40;p, η&#4
 <pre><code class="language-html">Last modified: &#123;&#123; fill jd_mtime &#125;&#125;.</code></pre>
 
 <p>&#40;cf. <code>src/_html_parts/page_foot.html</code>&#41; which will then replace these braces with the content of a dictionary of variables at the key <code>jd_mtime</code>. This dictionary of variables is accessed locally by pages through <code>@def varname &#61; value</code> and globally through the <code>config.md</code> page via the same syntax.</p>
-<p>There&#39;s a few other such functions of the form <code>&#123;&#123;fname p₁ p₂&#125;&#125;</code> as well as support for conditional blocks. If you wander through the <code>src/_html_parts/</code> folder and its content, you should be able to see those in action.
+<p>There&#39;s a few other such functions of the form <code>&#123;&#123;fname p₁ p₂&#125;&#125;</code> as well as support for conditional blocks. If you wander through the <code>src/_html_parts/</code> folder and its content, you should be able to see those in action.</p>
+<h2>Including scripts</h2>
+<p>In order to include the content of a script you can use the <code>\input</code> command specifying which language it should be tagged as:</p>
+<pre><code class=julia>x = randn(5)
+y = randn(5)
+
+for i in 1:5
+	println(rpad("*"^i, 10, '-'), round(dot(x, y), digits=1))
+end</code></pre>
+<p>these scripts can be run in such a way that their output is also saved to file, see <code>scripts/generate_results.jl</code> and you can then also input the results:</p>
+<pre><code >*---------1.3
+**--------1.3
+***-------1.3
+****------1.3
+*****-----1.3</code></pre>
+<p>which is convenient if you&#39;re presenting code. The <code>generate_results.jl</code> file also makes sure that all the code on your website works and that all results match the code which makes maintenance easy.
 <div class="page-foot">
 		<div class="copyright">
-				&copy; Septimia Zenobia. Last modified: March 04, 2019. Website built with <a href="https://github.com/tlienart/JuDoc.jl">JuDoc.jl</a>.
+				&copy; Septimia Zenobia. Last modified: March 05, 2019. Website built with <a href="https://github.com/tlienart/JuDoc.jl">JuDoc.jl</a>.
 		</div>
 </div>
 
