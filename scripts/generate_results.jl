@@ -4,11 +4,23 @@
 
 dir = @__DIR__
 
-for script in ["script1.jl", ]
-    fn = splitext(script)[1]
-    open(joinpath(dir, "output", "$(fn)_res.txt"), "w") do io
-        redirect_stdout(io) do
-            include(joinpath(dir, script))
+"""
+    genplain(s)
+
+Small helper function to run some code and redirect the output (stdout) to a file.
+"""
+function genplain(s::String)
+    open(joinpath(dir, "output", "$s.txt"), "w") do outf
+        redirect_stdout(outf) do
+            include(joinpath(dir, s * ".jl"))
         end
     end
 end
+
+# output
+
+genplain("script1")
+
+# plots
+
+include("scrip2.jl")
